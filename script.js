@@ -1,6 +1,11 @@
-const button = document.getElementById("btn");
-const title = document.getElementById("title");
+const container = document.querySelector('.container');
+const buttons = document.querySelectorAll('.next-btn');
 
-button.addEventListener("click", () => {
-  title.textContent = "You clicked the button 😄";
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    container.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  });
 });
