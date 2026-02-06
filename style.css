@@ -18,7 +18,7 @@ body {
 .screen {
   width: 100vw;
   height: 100svh; /* better than 100vh on iOS */
-  background-image: url("TODAY IS THE DAY.png");
+  background-image: url("images/background.png");
   /* if renamed: url("today-is-the-day@2x.png") */
 
   background-size: cover;
