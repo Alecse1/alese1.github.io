@@ -1,64 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html, body {
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background: black;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  overflow: hidden; /* no scroll, one screen only */
+.slider {
+    display: flex;
+    width: 900vw; /* 9 slides */
+    height: 100vh;
+    transition: transform 0.5s ease;
 }
 
-/* Full screen container */
 .screen {
-  width: 100vw;
-  height: 100svh; /* better than 100vh on iOS */
-  background-image: url("images/web.png");
-  /* if renamed: url("today-is-the-day@2x.png") */
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
-/* Content layer on top of background */
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: 16px;
-  padding-right: 16px;
-
-  display: flex;
-  align-items: flex-end; /* button near bottom */
-  justify-content: center;
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Button styling */
-.primary-btn {
-  width: 100%;
-  max-width: 320px;
-  height: 56px;
-
-  border: none;
-  border-radius: 16px;
-
-  font-size: 18px;
-  font-weight: 600;
-
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-
-  margin-bottom: 24px;
-
-  -webkit-tap-highlight-color: transparent;
+.button {
+    position: absolute;
+    transition: transform 0.1s ease;
 }
+
+.button.pressed {
+    transform: translateX(-50%) translateY(4px);
+}
+
+/* Slide 1 button */
+.btn1 { width: 100px; bottom: 91px; left: 78%; transform: translateX(-50%); }
+/* Slide 2 button */
+.btn2 { width: 140px; bottom: 108px; left: 75%; transform: translateX(-50%); }
+/* Slide 3 button */
+.btn3 { width: 60px; bottom: 112px; left: 86%; transform: translateX(-50%); }
+/* Slide 4 button */
+.btn4 { width: 140px; bottom: 88px; left: 78%; transform: translateX(-50%); }
+/* Slide 5 button */
+.btn5 { width: 114px; bottom: 40px; left: 84%; transform: translateX(-50%); }
+/* Slide 6 button */
+.btn6 { width: 130px; bottom: 75px; left: 84%; transform: translateX(-50%); }
+/* Slide 7 YES */
+.btn7_yes { width: 68px; bottom: 300px; left: 70%; transform: translateX(-50%); }
+/* Slide 7 NO */
+.btn7_no { width: 74px; bottom: 300px; left: 30%; transform: translateX(-50%); }
+/* Slide 8 */
+.btn8 { width: 240px; bottom: 178px; left: 50%; transform: translateX(-50%); }
+
