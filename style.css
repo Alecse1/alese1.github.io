@@ -36,9 +36,9 @@ html, body {
 
 .mute-button {
     position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 40px;
+    top: 40px;
+    right: 25px;
+    width: 70px;
     z-index: 1000;
     cursor: pointer;
 }
