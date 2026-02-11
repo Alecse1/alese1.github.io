@@ -1,6 +1,9 @@
 const slider = document.getElementById("slider");
 let currentIndex = 0;
 const totalSlides = 9;
+const finalMusic = document.getElementById("finalMusic");
+const muteBtn = document.getElementById("muteBtn");
+
 
 // Vibration safe
 function vibrate(duration = 30) {
@@ -12,6 +15,14 @@ function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
     currentIndex = index;
     slider.style.transform = "translateX(-" + (currentIndex * 100) + "vw)";
+
+    if (currentIndex === 8) { // Slide 9
+      startMusic();
+      muteBtn.style.display = "block";
+    } else {
+      stopMusic();
+      muteBtn.style.display = "none";
+    }
 }
 
 function setupButton(button, targetSlide) {
@@ -56,3 +67,41 @@ document.querySelectorAll(".btn").forEach(button => {
     const target = parseInt(button.dataset.target);
     setupButton(button, target);
 });
+
+
+function startMusic() {
+
+    if (!finalMusic.paused) return;
+
+    finalMusic.loop = true;
+    finalMusic.volume = 0;
+    finalMusic.play().catch(() => {});
+
+    let fade = setInterval(() => {
+        if (finalMusic.volume < 0.8) {
+            finalMusic.volume += 0.05;
+        } else {
+            clearInterval(fade);
+        }
+    }, 200);
+}
+
+
+function stopMusic() {
+    finalMusic.pause();
+    finalMusic.currentTime = 0;
+}
+
+
+muteBtn.addEventListener("click", () => {
+
+    if (finalMusic.muted) {
+        finalMusic.muted = false;
+        muteBtn.src = muteBtn.dataset.unmuted;
+    } else {
+        finalMusic.muted = true;
+        muteBtn.src = muteBtn.dataset.muted;
+    }
+
+});
+
