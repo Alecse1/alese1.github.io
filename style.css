@@ -43,21 +43,21 @@ html, body {
 }
 
 /* Slide 1 button */
-.btn1 { width: 100px; bottom: 40px; left: 78%; transform: translateX(-50%); }
+.btn1 { width: 100px; bottom: 12px; left: 78%; transform: translateX(-50%); }
 /* Slide 2 button */
-.btn2 { width: 140px; bottom: 108px; left: 75%; transform: translateX(-50%); }
+.btn2 { width: 140px; bottom: 28px; left: 75%; transform: translateX(-50%); }
 /* Slide 3 button */
-.btn3 { width: 60px; bottom: 112px; left: 86%; transform: translateX(-50%); }
+.btn3 { width: 60px; bottom: 18px; left: 86%; transform: translateX(-50%); }
 /* Slide 4 button */
-.btn4 { width: 140px; bottom: 88px; left: 78%; transform: translateX(-50%); }
+.btn4 { width: 140px; bottom: 19px; left: 78%; transform: translateX(-50%); }
 /* Slide 5 button */
-.btn5 { width: 114px; bottom: 80px; left: 84%; transform: translateX(-50%); }
+.btn5 { width: 114px; bottom: 7px; left: 84%; transform: translateX(-50%); }
 /* Slide 6 button */
-.btn6 { width: 130px; bottom: 75px; left: 84%; transform: translateX(-50%); }
+.btn6 { width: 130px; bottom: 12px; left: 84%; transform: translateX(-50%); }
 /* Slide 7 YES */
-.btn7_yes { width: 68px; bottom: 300px; left: 70%; transform: translateX(-50%); }
+.btn7_yes { width: 68px; bottom: 208px; left: 70%; transform: translateX(-50%); }
 /* Slide 7 NO */
-.btn7_no { width: 74px; bottom: 300px; left: 30%; transform: translateX(-50%); }
+.btn7_no { width: 74px; bottom: 208px; left: 30%; transform: translateX(-50%); }
 /* Slide 8 */
-.btn8 { width: 240px; bottom: 178px; left: 50%; transform: translateX(-50%); }
+.btn8 { width: 240px; bottom: 78px; left: 50%; transform: translateX(-50%); }
 

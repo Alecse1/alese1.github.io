@@ -10,20 +10,20 @@ function vibrate(duration = 30) {
     if (navigator.vibrate) navigator.vibrate(duration);
 }
 
-// // Slide navigation
-// function goToSlide(index) {
-//     if (index < 0 || index >= totalSlides) return;
-//     currentIndex = index;
-//     slider.style.transform = "translateX(-" + (currentIndex * 100) + "vw)";
+// Slide navigation
+function goToSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+    currentIndex = index;
+    slider.style.transform = "translateX(-" + (currentIndex * 100) + "vw)";
 
-//     if (currentIndex === 8) { // Slide 9
-//       startMusic();
-//       muteBtn.style.display = "block";
-//     } else {
-//       stopMusic();
-//       muteBtn.style.display = "none";
-//     }
-// }
+    if (currentIndex === 8) { // Slide 9
+      startMusic();
+      muteBtn.style.display = "block";
+    } else {
+      stopMusic();
+      muteBtn.style.display = "none";
+    }
+}
 
 function setupButton(button, targetSlide) {
 
