@@ -43,7 +43,7 @@ html, body {
 }
 
 /* Slide 1 button */
-.btn1 { width: 100px; bottom: 91px; left: 78%; transform: translateX(-50%); }
+.btn1 { width: 100px; bottom: 40px; left: 78%; transform: translateX(-50%); }
 /* Slide 2 button */
 .btn2 { width: 140px; bottom: 108px; left: 75%; transform: translateX(-50%); }
 /* Slide 3 button */
