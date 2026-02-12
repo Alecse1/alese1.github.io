@@ -2,20 +2,19 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    overscroll-behavior: none;
     background: black;
+    height: 100%;
 }
+
 
 .slider {
     display: flex;
-    width: 900vw; /* 9 slides */
-    height: 100vh;
+    width: 900vw;
     transition: transform 0.5s ease;
 }
 
 .screen {
     width: 100vw;
-    height: 100vh;
     position: relative;
 }
 

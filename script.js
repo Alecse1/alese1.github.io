@@ -105,3 +105,24 @@ muteBtn.addEventListener("click", () => {
 
 });
 
+function setRealHeight() {
+    const vh = window.visualViewport
+        ? window.visualViewport.height
+        : window.innerHeight;
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.style.height = vh + "px";
+    });
+
+    document.querySelector(".slider").style.height = vh + "px";
+}
+
+
+setRealHeight();
+
+window.addEventListener("resize", setRealHeight);
+
+if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", setRealHeight);
+}
+
